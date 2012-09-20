@@ -39,6 +39,6 @@ class LogicFunc:
 		pass
 			
 print("Logic function test")
-lf1 = LogicFunc(3,2)
+lf1 = LogicFunc(3,2,auto=True)
 print lf1
 
