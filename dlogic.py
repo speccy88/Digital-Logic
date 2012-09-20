@@ -38,7 +38,7 @@ class LogicFunc:
 	def createTable(self):
 		pass
 			
-print("Logic function test")
-lf1 = LogicFunc(3,2,auto=True)
+print("Logic function testing")
+lf1 = LogicFunc(3,2,auto=False)
 print lf1
 
