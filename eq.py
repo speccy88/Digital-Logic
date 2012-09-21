@@ -51,8 +51,7 @@ def evalEquation(eq,tail=None):
 			res = res or table[in3]
 		elif op == "&":
 			res = res and table[in3]
-		
-	return res
+	
 
 def getOp(eq):	
 	and_loc = eq.find("&")

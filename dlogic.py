@@ -37,8 +37,43 @@ class LogicFunc:
 
 	def createTable(self):
 		pass
+
+	def drawTable(self):
+		self.w = 1
+		for x in lf1.o:
+			self.w=self.w+len(x)
+			self.w=self.w+1
+		for x in lf1.i:
+			self.w=self.w+len(x)
+			self.w=self.w+1
+	
+		print self.w*'='
+		line = []
+		line.append('|')
+		line.append("|".join(self.i))
+		line.append('|')
+		line.append("|".join(self.o))
+		line.append('|')
+		linep = "".join(line)
+		print str(linep)
 			
+		print self.w*'-'
+
+		blank = []
+		for x in linep:
+			if x == "|":
+				blank.append(x)
+			else:
+				blank.append(" ")
+		blankp = "".join(blank)
+
+		for x in range(2**len(self.i)):
+			print blankp
+		print self.w*'='
+		
+
 print("Logic function testing")
-lf1 = LogicFunc(3,2,auto=False)
+lf1 = LogicFunc(3,1,auto=True)
 print lf1
+lf1.drawTable()
 
